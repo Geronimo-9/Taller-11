@@ -10,18 +10,27 @@ public Figura(String nombre){
 public abstract void mostrarArea();
 public abstract double calcularArea();
 
+public void detalles(){
+    System.out.println("Esta figura tiene x medidas");
+}
 
 }
+
+
+
+
+// Clase hija circulo.
 
 class circulo extends Figura{
     protected double radio;
     protected final double pi;
-
+    protected double diametro;
 
     public circulo(String nombre, double radio){
         super(nombre);
         this.radio = radio;
         this.pi = 3.14;
+        this.diametro = radio*2;
 
     }
 
@@ -34,6 +43,15 @@ class circulo extends Figura{
     @Override
     public void mostrarArea() {
         System.out.println("El area del circulo es: "+calcularArea());
+    }
+
+
+
+
+    @Override
+    public void detalles() {
+        System.out.println("Est figura tiene un radio de "+radio+" metros, y su diametro es de"+diametro);
+
     }
 }
 
@@ -58,5 +76,11 @@ class rectangulo extends Figura{
     @Override
     public void mostrarArea() {
         System.out.println("El area del Rectangulo es: "+calcularArea());
+    }
+
+
+    @Override
+    public void detalles() {
+        System.out.println("Este rectangulo tiene un largo de "+largo+" y un ancho de "+ancho);
     }
 }

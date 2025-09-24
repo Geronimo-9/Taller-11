@@ -27,10 +27,18 @@ public class Main {
         v1.mostrarDetalles();
 
 
+        //Ejercicio 3, Probando más acerca de la clase abstracta.
+
+        /*Acá se intentó instanciar un objeto a traves de la clase abstracta, pero el compilador no lo permite
+        Esto se debe a que la clase abstracta es una base principal para diseñar las clases derivadas referentes.
+        */
 
 
-       
+        // Empleado e1 = new Empleado("Guillen", 300000, 30);
 
+
+        square.detalles(); //nuevo metodo implementado en la clase figura.
 
 
     }
+}
